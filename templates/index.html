@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Smart File Organizer</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="dashboard">
+    <div class="left-panel">
+        <div class="logo">
+            📂
+        </div>
+        <h1>
+            Smart File
+            <br>
+            Organizer
+        </h1>
+        <p>
+            Automatically organize files into categories
+            using Python and Flask.
+            Clean.
+            Fast.
+            Intelligent.
+        </p>
+        <div class="feature-list">
+            <div class="feature">
+                <span>⚡</span>
+                One Click Organization
+            </div>
+            <div class="feature">
+                <span>📄</span>
+                Auto File Classification
+            </div>
+            <div class="feature">
+                <span>🔒</span>
+                Safe & Reliable
+            </div>
+            <div class="feature">
+                <span>💻</span>
+                Beginner Friendly
+            </div>
+        </div>
+    </div>
+    <div class="right-panel">
+        <h2>
+            Organize Folder
+        </h2>
+        <form method="POST">
+            <label>
+                Folder Path
+            </label>
+            <input
+                type="text"
+                name="folder_path"
+                placeholder="C:\Users\YourFolder"
+                required>
+            <button type="submit">
+                🚀 Organize Files
+            </button>
+        </form>
+        {% if result %}
+        <div class="result">
+            <div class="cards">
+                <div class="card">
+                    <h3>{{ result.moved }}</h3>
+                    <p>Moved</p>
+                </div>
+               <div class="card">
+                    <h3>{{ result.failed }}</h3>
+                    <p>Failed</p>
+                </div>
+                <div class="card">
+                    <h3>{{ result.skipped }}</h3>
+                    <p>Skipped</p>
+                </div>
+            </div>
+            <div class="status">
+                <strong>Status</strong>
+                <p>{{ result.message }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

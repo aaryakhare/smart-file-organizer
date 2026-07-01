@@ -1,0 +1,369 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#EEF2FF,#E0F2FE,#FCE7F3);
+}
+
+.dashboard{
+
+    width:min(1100px,95vw);
+    height:min(650px,92vh);
+
+    display:grid;
+    grid-template-columns:42% 58%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.12);
+}
+
+
+/* LEFT */
+
+.left-panel{
+
+    padding:40px;
+
+    background:linear-gradient(180deg,#6366F1,#7C3AED);
+
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+
+    width:75px;
+    height:75px;
+
+    background:white;
+
+    color:#6366F1;
+
+    border-radius:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:35px;
+
+    margin-bottom:25px;
+}
+
+.left-panel h1{
+
+    font-size:40px;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+}
+
+.left-panel p{
+
+    opacity:.9;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+    font-size:15px;
+}
+
+.feature-list{
+
+    display:grid;
+    gap:16px;
+}
+
+.feature{
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    background:rgba(255,255,255,.12);
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    transition:.3s;
+}
+
+.feature:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.feature span{
+
+    font-size:22px;
+}
+
+
+/* RIGHT */
+
+.right-panel{
+
+    padding:35px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.right-panel h2{
+
+    color:#1E293B;
+
+    font-size:30px;
+
+    margin-bottom:28px;
+}
+
+label{
+
+    font-weight:600;
+
+    color:#475569;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:14px;
+
+    background:#F1F5F9;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+}
+
+input:focus{
+
+    background:white;
+
+    box-shadow:0 0 0 3px rgba(99,102,241,.2);
+}
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#6366F1,#8B5CF6);
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(99,102,241,.35);
+}
+
+.result{
+
+    margin-top:30px;
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.card{
+
+    background:#F8FAFC;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card h3{
+
+    font-size:32px;
+
+    color:#6366F1;
+
+    margin-bottom:8px;
+}
+
+.card p{
+
+    color:#64748B;
+}
+
+.status{
+
+    margin-top:20px;
+
+    background:#EEF2FF;
+
+    border-left:5px solid #6366F1;
+
+    border-radius:12px;
+
+    padding:18px;
+}
+
+.status strong{
+
+    color:#4338CA;
+}
+
+.status p{
+
+    margin-top:8px;
+
+    color:#475569;
+}
+
+
+/* Laptop */
+
+@media(max-width:1000px){
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+height:auto;
+
+overflow:auto;
+
+max-height:95vh;
+
+}
+
+.left-panel{
+
+padding:30px;
+
+}
+
+.right-panel{
+
+padding:30px;
+
+}
+
+}
+
+
+/* Mobile */
+
+@media(max-width:650px){
+
+body{
+
+overflow:auto;
+
+height:auto;
+
+padding:20px;
+
+}
+
+.dashboard{
+
+width:100%;
+
+}
+
+.left-panel h1{
+
+font-size:30px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.logo{
+
+width:60px;
+height:60px;
+font-size:28px;
+
+}
+
+}
