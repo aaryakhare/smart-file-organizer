@@ -24,9 +24,3 @@ A simple and intelligent **Flask-based web application** that automatically orga
 - Jinja2 Templates
 
 ---
-
-## 📸 Preview
-
-> Add screenshots here (recommended)
-
-Example:
